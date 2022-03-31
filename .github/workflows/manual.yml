@@ -23,7 +23,8 @@ on:
         default: 'RT/BT'
         # Input has to be provided for the workflow to run
         required: true
-    choice:
+      
+      choice:
       type: choice
       description: Make a choice
       options:

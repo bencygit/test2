@@ -33,6 +33,7 @@ on:
         
       choice:  
         # Friendly description to be shown in the UI instead of 'name'
+        type: choice
         description: 'Make a choice'
         # Default value if no value is explicitly provided
         options: 

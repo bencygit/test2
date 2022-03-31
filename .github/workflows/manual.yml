@@ -23,8 +23,14 @@ on:
         default: 'RT/BT'
         # Input has to be provided for the workflow to run
         required: true
-        
-             
+    choice:
+      type: choice
+      description: Make a choice
+      options:
+      - integration
+      - integration2
+      - integration3
+      
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"

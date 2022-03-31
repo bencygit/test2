@@ -17,7 +17,7 @@ on:
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'SERVER_NAME'
+        description: 'SERVER_TYPE'
         # Default value if no value is explicitly provided
         default: 'RT/BT'
         # Input has to be provided for the workflow to run
@@ -25,9 +25,9 @@ on:
         
       tags:  
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'SERVER_TYPE'
+        description: 'SERVER_NAME'
         # Default value if no value is explicitly provided
-        default: 'RT/BT'
+        default: 'wmeasnad01xyz'
         # Input has to be provided for the workflow to run
         required: true
         

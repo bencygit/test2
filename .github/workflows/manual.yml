@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
-    choice:
+    name:
       type: choice
       description: Make a choice
       options:

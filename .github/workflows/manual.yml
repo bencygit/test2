@@ -16,7 +16,8 @@ on:
         # Input has to be provided for the workflow to run
         required: true
     
-    name1:
+    inputs:
+    name:
         # Friendly description to be shown in the UI instead of 'name'
         description: 'Integration_Interface'
         # Default value if no value is explicitly provided

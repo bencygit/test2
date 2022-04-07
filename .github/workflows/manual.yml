@@ -66,6 +66,7 @@ jobs:
   job2:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    steps: 
-      -run: echo hello world
+    steps:
+    - name: testing
+      run: echo hello world
     

@@ -22,6 +22,11 @@ on:
         # Input has to be provided for the workflow to run
         required: true 
       
+  choose:
+       - main
+        - 'mona/octocat'
+        - 'releases/**'
+      
       tags:  
         # Friendly description to be shown in the UI instead of 'name'
         description: 'SERVER_NAME'

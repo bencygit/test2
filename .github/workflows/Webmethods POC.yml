@@ -1,4 +1,4 @@
-name: Mixed inputs
+name: Webmethods POC
 
 on:
   workflow_dispatch:

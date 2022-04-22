@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
-      name:
+     # name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'SERVER_TYPE'
+       # description: 'SERVER_TYPE'
         # Default value if no value is explicitly provided
-        default: 'RT/BT'
+       # default: 'RT/BT'
         # Input has to be provided for the workflow to run
-        required: true
+       # required: true
               
       choice:
         type: choice

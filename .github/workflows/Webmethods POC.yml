@@ -4,14 +4,7 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
-     # name:
-        # Friendly description to be shown in the UI instead of 'name'
-       # description: 'SERVER_TYPE'
-        # Default value if no value is explicitly provided
-       # default: 'RT/BT'
-        # Input has to be provided for the workflow to run
-       # required: true
-              
+            
       choice:
         type: choice
         description: 'SERVER_TYPE'
@@ -49,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Send greeting
+    - name: Webemthods POC
       run: echo "Hello ${{ github.event.inputs.name }}"
 
   Job1_Prepare:
@@ -60,9 +53,9 @@ jobs:
       output2: ${{ steps.step2.outputs.test }}
     steps:
       - id: step1
-        run: echo "::set-output name=test::hello"
+        run: echo "::set-output name=test::Job1_Prepare"
       - id: step2
-        run: echo "::set-output name=test::world"
+        run: echo "::set-output name=test::Job1_Prepare"
   
   job2_Build:
     runs-on: ubuntu-latest

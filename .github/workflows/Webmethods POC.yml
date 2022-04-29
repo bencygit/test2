@@ -92,3 +92,19 @@ jobs:
     steps:
       - name: Run a one-line script
         run: echo "job5_JMeter is run"
+   
+  trigger-test:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+       - name: Check the one
+         uses: bencygit/should-run-github-action@v1
+         id: check
+         env:
+          GITHUB_EVENT: ${{toJson(github.event)}} 
+          
+       - name: Run tests if the user click the checkbox
+         if: ${{ steps.check.output.shouldRun }}
+         run: echo "Running tests...."
+
+

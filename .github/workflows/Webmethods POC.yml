@@ -86,4 +86,4 @@ jobs:
     needs: [job5_JMeter]
     steps:
       - name: Run a one-line script
-        run: echo "job5_JMeter ${{gtihub.event.input.tags}}"
+        run: echo "job5_JMeter is run"

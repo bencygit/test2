@@ -1,3 +1,3 @@
 test Readme file
-[My Github Page] (github.io/test2/)
+[My Github Page] (https://bencygit.github.io/test2/)
 [clcik] (www.google.com)

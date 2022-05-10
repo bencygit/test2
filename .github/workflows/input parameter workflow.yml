@@ -51,6 +51,10 @@ on:
                   
 
 jobs:  
+  lint:
+    runs-on: ubuntu-latest
+    name: Validate terraform configuration
+
   trigger-test: #Testing conditions
      if: |
       inputs.choice == 'RT' &&
@@ -58,6 +62,7 @@ jobs:
         inputs.choice1 == 'INTERFACE-1' && 
         inputs.choice2 == 'PACKAGE-1' 
       )
+     needs: lint
      name: Testing conditions
      runs-on: ubuntu-latest
      steps:

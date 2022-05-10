@@ -92,5 +92,6 @@ jobs:
       )
       steps:
       -name: testing conditions
+       uses: actions/checkout@v2
        run: echo "testing conditions"
      

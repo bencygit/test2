@@ -23,9 +23,33 @@ on:
         default: 'wmeasnad01xyz'
         # Input has to be provided for the workflow to run
         required: true
-      
-            
+
       choice1:  
+        # Friendly description to be shown in the UI instead of 'name'
+        type: choice
+        description: 'INTEGRATION INTERFACE'
+        # Default value if no value is explicitly provided
+        options: 
+        - INTERFACE-1
+        - INTERFACE-2
+        - INTERFACE-3
+        # Input has to be provided for the workflow to run
+        required: true
+ 
+
+      choice2:  
+        # Friendly description to be shown in the UI instead of 'name'
+        type: choice
+        description: 'PACKAGE NAME'
+        # Default value if no value is explicitly provided
+        options: 
+        - PACKAGE-1
+        - PACKAGE-2
+        - PACKAGE-3
+        # Input has to be provided for the workflow to run
+        required: true
+            
+      choice3:  
         # Friendly description to be shown in the UI instead of 'name'
         type: choice
         description: 'STAGES'
@@ -36,6 +60,23 @@ on:
         - JMETER
         # Input has to be provided for the workflow to run
         required: true  
+        
+        
+      tags1:  
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'UT_USER'
+        # Default value if no value is explicitly provided
+        default: 'USERNAME'
+        # Input has to be provided for the workflow to run
+                
+
+      tags2:  
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'UT_PASSWORD'
+        # Default value if no value is explicitly provided
+        default: 'PASSWORD'
+        # Input has to be provided for the workflow to run
+           
 
 jobs:
   greet:

@@ -91,7 +91,6 @@ jobs:
         inputs.choice2 == 'PACKAGE-1' 
       )
       steps:
-      -name: testing conditions
-       uses: actions/checkout@v2
-       run: echo "testing conditions"
+      - name: testing conditions
+        run: echo "testing conditions"
      

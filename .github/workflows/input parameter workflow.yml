@@ -50,18 +50,20 @@ on:
         required: true
                   
 
-jobs:
-     
+jobs:  
   trigger-test: #Testing conditions
-     name: Testing conditions
-     runs-on: ubuntu-latest
      if: |
       inputs.choice == 'RT' &&
       (
         inputs.choice1 == 'INTERFACE-1' && 
         inputs.choice2 == 'PACKAGE-1' 
       )
-      steps:
+     name: Testing conditions
+     runs-on: ubuntu-latest
+     steps:
       - name: testing conditions
         run: echo "testing conditions"
-     
+ 
+
+
+

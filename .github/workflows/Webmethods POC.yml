@@ -135,18 +135,4 @@ jobs:
       - name: Run a one-line script
         run: echo "job5_JMeter is run"
    
-  trigger-test:
-     runs-on: ubuntu-latest
-     
-     if: |
-      github.event.inputs.choice == 'RT' &&
-      (
-        github.event.inputs.choice1 == 'INTERFACE-1' && 
-        github.event.inputs.choice2 == 'PACKAGE-1' 
-      )
-      steps:
-      -name: testing conditions
-       run: echo "testing conditions"
-     
-
-
+  

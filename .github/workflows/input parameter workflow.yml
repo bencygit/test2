@@ -85,7 +85,7 @@ jobs:
      name: Testing conditions
      runs-on: ubuntu-latest
      if: |
-      github.event.inputs.choice == 'RT' &&
+      inputs.choice == 'RT' &&
       (
         inputs.choice1 == 'INTERFACE-1' && 
         inputs.choice2 == 'PACKAGE-1' 

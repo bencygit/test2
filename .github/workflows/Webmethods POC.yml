@@ -58,6 +58,7 @@ on:
         - BUILD/DEPLOY
         - JUNIT
         - JMETER
+        - ARTIFACTORY PUSH
         # Input has to be provided for the workflow to run
         required: true  
         

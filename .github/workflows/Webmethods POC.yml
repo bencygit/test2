@@ -137,16 +137,16 @@ jobs:
    
   trigger-test:
      runs-on: ubuntu-latest
-     steps:
-       - uses: actions/checkout@v2
-       - name: Check the one
-         uses: bencygit/should-run-github-action@v1
-         id: check
-         env:
-          GITHUB_EVENT: ${{toJson(github.event)}} 
-          
-       - name: Run tests if the user click the checkbox
-         if: ${{ steps.check.output.shouldRun }}
-         run: echo "Running tests...."
+     
+     if: |
+      github.event.inputs.choice == 'RT' &&
+      (
+        github.event.inputs.choice1 == 'INTERFACE-1' && 
+        github.event.inputs.choice2 == 'PACKAGE-1' 
+      )
+      steps:
+      -name: testing conditions
+       run: echo "testing conditions"
+     
 
 

@@ -87,8 +87,8 @@ jobs:
      if: |
       github.event.inputs.choice == 'RT' &&
       (
-        github.event.inputs.choice1 == 'INTERFACE-1' && 
-        github.event.inputs.choice2 == 'PACKAGE-1' 
+        inputs.choice1 == 'INTERFACE-1' && 
+        inputs.choice2 == 'PACKAGE-1' 
       )
       steps:
       -name: testing conditions

@@ -48,36 +48,7 @@ on:
         - PACKAGE-3
         # Input has to be provided for the workflow to run
         required: true
-            
-      choice3:  
-        # Friendly description to be shown in the UI instead of 'name'
-        type: choice
-        description: 'STAGES'
-        # Default value if no value is explicitly provided
-        options: 
-        - BUILD/DEPLOY
-        - JUNIT
-        - JMETER
-        - ARTIFACTORY PUSH
-        # Input has to be provided for the workflow to run
-        required: true  
-        
-        
-      tags1:  
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'UT_USER'
-        # Default value if no value is explicitly provided
-        default: 'USERNAME'
-        # Input has to be provided for the workflow to run
-                
-
-      tags2:  
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'UT_PASSWORD'
-        # Default value if no value is explicitly provided
-        default: 'PASSWORD'
-        # Input has to be provided for the workflow to run
-           
+                  
 
 jobs:
      

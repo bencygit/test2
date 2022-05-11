@@ -59,11 +59,11 @@ jobs:
 
   trigger-test: #Testing conditions
      if: |
-      inputs.choice == 'RT' &&
-      (
-        inputs.choice1 == 'INTERFACE-1' && 
-        inputs.choice2 == 'PACKAGE-1' 
-      )
+      github.event.inputs.choice == 'RT' &&
+     # (
+      #  inputs.choice1 == 'INTERFACE-1' && 
+       # inputs.choice2 == 'PACKAGE-1' 
+      #)
      needs: lint
      name: Testing conditions
      runs-on: ubuntu-latest

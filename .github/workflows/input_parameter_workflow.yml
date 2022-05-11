@@ -16,8 +16,9 @@ on:
         required: true 
       
 env:
-  DAY_OF_WEEK: Monday      
-                  
+  DAY_OF_WEEK: Monday     
+  RT_Server: RT
+  BT_Server: BT
 jobs:  
  
   greeting_job:
@@ -30,4 +31,8 @@ jobs:
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         env:
           First_Name: Mona
+          
+      - name: "Testing Conditions"
+        if: ${{ env.RT_Server == 'RT' }}
+        run: echo "RT Server is selected"          
 

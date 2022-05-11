@@ -15,15 +15,17 @@ on:
         # Input has to be provided for the workflow to run
         required: true 
       
-      
-      tags:  
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'SERVER_NAME'
-        # Default value if no value is explicitly provided
-        default: 'wmeasnad01xyz'
+      choice0:
+        type: choice
+        description: 'SERVER_TYPE'
+        options: 
+        - RT
+        - BT
+        - RT/BT
         # Input has to be provided for the workflow to run
-        required: true
-
+        required: true 
+        
+        
       choice1:  
         # Friendly description to be shown in the UI instead of 'name'
         type: choice
@@ -136,3 +138,10 @@ jobs:
         run: echo "job5_JMeter is run"
    
   
+#tags:  
+        # Friendly description to be shown in the UI instead of 'name'
+        #description: 'SERVER_NAME'
+        # Default value if no value is explicitly provided
+        #default: 'wmeasnad01xyz'
+        # Input has to be provided for the workflow to run
+        #required: true

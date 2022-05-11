@@ -16,46 +16,11 @@ on:
         required: true 
       
       
-      choice0:
-        type: choice
-        description: 'SERVER_NAME'
-        options: 
-        - wmserver1
-        - wmserver2
-        - wmserver3
-        # Input has to be provided for the workflow to run
-        required: true
-
-      choice1:  
-        # Friendly description to be shown in the UI instead of 'name'
-        type: choice
-        description: 'INTEGRATION INTERFACE'
-        # Default value if no value is explicitly provided
-        options: 
-        - INTERFACE-1
-        - INTERFACE-2
-        - INTERFACE-3
-        # Input has to be provided for the workflow to run
-        required: true
- 
-
-      choice2:  
-        # Friendly description to be shown in the UI instead of 'name'
-        type: choice
-        description: 'PACKAGE NAME'
-        # Default value if no value is explicitly provided
-        options: 
-        - PACKAGE-1
-        - PACKAGE-2
-        - PACKAGE-3
-        # Input has to be provided for the workflow to run
-        required: true
                   
-
 jobs:  
   lint:
     runs-on: ubuntu-latest
-    name: Validate terraform configuration
+    name: Validate conditions
 
   trigger-test: #Testing conditions
      if: |

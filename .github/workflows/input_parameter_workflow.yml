@@ -19,27 +19,6 @@ env:
   DAY_OF_WEEK: Monday      
                   
 jobs:  
-  #lint:
-  #  runs-on: ubuntu-latest
-  #  name: Validate conditions
-
-  trigger-test: #Testing conditions
-     name: Testing conditions
-     runs-on: ubuntu-latest
-     if: |
-      github.event.inputs.choice == 'RT'
-     # (
-      #  inputs.choice1 == 'INTERFACE-1' && 
-       # inputs.choice2 == 'PACKAGE-1' 
-      #)
-     #needs: lint
-     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
  
   greeting_job:
     runs-on: ubuntu-latest

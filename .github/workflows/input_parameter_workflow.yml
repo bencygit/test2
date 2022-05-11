@@ -15,7 +15,8 @@ on:
         # Input has to be provided for the workflow to run
         required: true 
       
-      
+env:
+  DAY_OF_WEEK: Monday      
                   
 jobs:  
   #lint:
@@ -39,6 +40,14 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-
-
+ 
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Mona it's Monday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Mona
 

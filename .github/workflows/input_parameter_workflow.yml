@@ -40,3 +40,12 @@ jobs:
         if: ${{ github.event.inputs.choice == 'BT' }}
         run: echo "BT Server is selected" 
 
+  validate: #Perform validation before any other jobs run.  If we fail validation, don't run anything else.
+    name: Validation
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Validate test
+      run: .github/scripts/test.sh

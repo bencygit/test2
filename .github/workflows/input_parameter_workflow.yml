@@ -1,4 +1,4 @@
-name: Webmethods POC
+name: input_parameter_workflow
 
 on:
   workflow_dispatch:

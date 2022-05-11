@@ -17,11 +17,11 @@ on:
       
       choice0:
         type: choice
-        description: 'SERVER_TYPE'
+        description: 'SERVER_NAME'
         options: 
-        - RT
-        - BT
-        - RT/BT
+        - wmserver1
+        - wmserver2
+        - wmserver3
         # Input has to be provided for the workflow to run
         required: true 
         

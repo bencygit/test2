@@ -50,8 +50,8 @@ jobs:
         run: echo "RT Server is selected"      
         
       - name: "Testing Conditions"
-        if: ${{ github.event.inputs.choice == 'BT' }}
-        run: echo "BT Server is selected" 
+        if: ${{ github.event.inputs.choice == 'BT' }} && ${{github.event.inputs.choice1.1 == 'wmserver1'}}
+        run: echo "BT Server and wmserver1 is selected" 
 
   validate: #Perform validation before any other jobs run.  If we fail validation, don't run anything else.
     name: Validation

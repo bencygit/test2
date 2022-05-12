@@ -81,7 +81,7 @@ on:
         # Input has to be provided for the workflow to run
 
 env:
-  DAY_OF_WEEK: Monday     
+  DAY_OF_WEEK: Variable     
   RT_Server: RT
   BT_Server: BT
 
@@ -121,13 +121,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: [job3_Deploy]
     env:
-      Greeting: Hello
+      Greeting: Testing
     steps:
-      - name: "Say Hello Mona it's Monday"
-        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
+      - name: "Testing Environment Variable"
+        if: ${{ env.DAY_OF_WEEK == 'Variable' }}
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         env:
-          First_Name: Mona
+          First_Name: Environment
           
       - name: "Testing Environment Variables"
         if: ${{ env.RT_Server == 'RT' }}

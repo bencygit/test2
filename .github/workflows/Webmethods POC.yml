@@ -79,7 +79,11 @@ on:
         # Default value if no value is explicitly provided
         default: 'PASSWORD'
         # Input has to be provided for the workflow to run
-           
+
+env:
+  DAY_OF_WEEK: Monday     
+  RT_Server: RT
+  BT_Server: BT
 
 jobs:
   greet:

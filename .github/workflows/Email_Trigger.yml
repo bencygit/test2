@@ -1,4 +1,4 @@
-name: input_parameter_workflow
+name: Email_Trigger_workflow
 
 on:
   workflow_dispatch:

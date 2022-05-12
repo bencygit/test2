@@ -115,9 +115,26 @@ jobs:
       
   job4_Junit:
     runs-on: ubuntu-latest
+    env:
+      env1: Testing
     needs: [job3_Deploy]
     steps:
-      - run: echo "Junit is run"  
+      - run: echo "Junit is run for testing Environment Variables...!!" 
+      - name: "Test env variables"
+        if: ${{ env.env3 == 'Using Env Variables' }}
+        run: echo "$env1 $env2. Today is $env3!"
+        env:
+          env2: Junit
+          
+      - name: "Testing Environment Variables"
+        if: ${{ env.RT_Server == 'RT' }}
+        run: echo "RT Server is selected"      
+        
+      - name: "Testing Conditions"
+        if: ${{ github.event.inputs.choice == 'BT' }}
+        run: echo "BT Server is selected"
+      
+      
       
   job5_JMeter:
     runs-on: ubuntu-latest

@@ -121,13 +121,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: [job3_Deploy]
     env:
-      Greeting: Testing
+      Greeting: Hello
     steps:
-      - name: "Testing Environment Variables"
-        if: ${{ env.DAY_OF_WEEK == 'Variables' }}
-        run: echo "$Greeting $First_Name $DAY_OF_WEEK!"
+      - name: "Say Hello Mona it's Monday"
+        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         env:
-          First_Name: Environment
+          First_Name: Mona
           
       - name: "Testing Environment Variables"
         if: ${{ env.RT_Server == 'RT' }}

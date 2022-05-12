@@ -1,0 +1,70 @@
+name: input_parameter_workflow
+
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+            
+      choice:
+        type: choice
+        description: 'SERVER_TYPE'
+        options: 
+        - RT
+        - BT
+        - RT/BT
+        # Input has to be provided for the workflow to run
+        required: true 
+      
+env:
+  DAY_OF_WEEK: Monday     
+  RT_Server: RT
+  BT_Server: BT
+jobs:  
+ 
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Mona it's Monday"
+        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Mona
+          
+      - name: "Testing Environment Variables"
+        if: ${{ env.RT_Server == 'RT' }}
+        run: echo "RT Server is selected"      
+        
+      - name: "Testing Conditions"
+        if: ${{ github.event.inputs.choice == 'BT' }}
+        run: echo "BT Server is selected" 
+
+  validate: #Perform validation before any other jobs run.  If we fail validation, don't run anything else.
+    name: Validation
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Validate test
+      run: .github/scripts/test.sh
+      
+    - name: Send mail
+      if: always()
+      uses: bencygit/action-send-mail@v2
+      with:
+     # mail server settings
+       server_address: smtp.gmail.com
+       server_port: 465
+    # user credentials
+       username: ${{ secrets.EMAIL_USERNAME }}
+       password: ${{ secrets.EMAIL_PASSWORD }}
+    # email subject
+       subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+    # email body as text
+       body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+    # comma-separated string, send email to
+       to: bencyjacob07@gmail.com
+    # from email name
+       from: BJ

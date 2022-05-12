@@ -5,7 +5,7 @@ on:
     # Inputs the workflow accepts.
     inputs:
             
-      choice:
+      choice1:
         type: choice
         description: 'SERVER_TYPE'
         options: 
@@ -14,13 +14,26 @@ on:
         - RT/BT
         # Input has to be provided for the workflow to run
         required: true 
-      
+        default: true
+
+      choice1.1:
+        type: choice
+        description: 'SERVER_RT_NAME'
+        options: 
+        - RT1
+        - RT2
+        # Input has to be provided for the workflow to run
+        required: true
+
+
 env:
   DAY_OF_WEEK: Monday     
   RT_Server: RT
   BT_Server: BT
+
 jobs:  
- 
+       
+           
   greeting_job:
     runs-on: ubuntu-latest
     env:

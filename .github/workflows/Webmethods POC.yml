@@ -136,6 +136,9 @@ jobs:
     steps:
       - name: Run a one-line script
         run: echo "job5_JMeter is run"
+      - uses: actions/checkout@v2
+      - name: Validate shell script
+        run: .github/scripts/test.sh
    
   
 #tags:  

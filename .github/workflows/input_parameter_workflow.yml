@@ -25,6 +25,14 @@ on:
         # Input has to be provided for the workflow to run
         required: true
 
+      tags:  
+        # Friendly description to be shown in the UI instead of 'name'
+        #description: 'SERVER_NAME'
+        # Default value if no value is explicitly provided
+        #default: 'wmeasnad01xyz'
+        # Input has to be provided for the workflow to run
+        #required: true
+
 
 env:
   DAY_OF_WEEK: Monday     
@@ -71,5 +79,3 @@ jobs:
       run: .github/scripts/test.sh
       
   
-
-

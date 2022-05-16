@@ -26,12 +26,12 @@ on:
         required: true
 
       tags:  
-        # Friendly description to be shown in the UI instead of 'name'
-        #description: 'SERVER_NAME'
+        #Friendly description to be shown in the UI instead of 'name'
+        description: 'SERVER_NAME'
         # Default value if no value is explicitly provided
-        #default: 'wmeasnad01xyz'
+        default: 'wmeasnad01xyz'
         # Input has to be provided for the workflow to run
-        #required: true
+        required: true
 
 
 env:

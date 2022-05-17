@@ -33,6 +33,7 @@ on:
         # Input has to be provided for the workflow to run
         required: true
 
+      Package:
       package1:
         description: package1
         type: boolean

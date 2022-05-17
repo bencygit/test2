@@ -34,27 +34,26 @@ on:
         required: true
 
       package1:
-        description: Whether to foo
+        description: package1
         type: boolean
         required: true
-        default: true
+        default: false
       package2:
-        description: Whether to foo
+        description: package2
         type: boolean
         required: true
-        default: true
+        default: false
       package3:
-        description: Whether to foo
+        description: package3
         type: boolean
         required: true
-        default: true
+        default: false
       package4:
-        description: Whether to foo
+        description: package4
         type: boolean
         required: true
-        default: true
+        default: false
         
-
 
 env:
   DAY_OF_WEEK: Monday     

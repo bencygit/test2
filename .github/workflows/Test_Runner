@@ -1,0 +1,25 @@
+name: Testing Runner
+
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+
+      tags:  
+        #Friendly description to be shown in the UI instead of 'name'
+        description: 'SERVER_NAME'
+        # Default value if no value is explicitly provided
+        default: 'abc'
+        # Input has to be provided for the workflow to run
+        required: true
+        
+jobs:
+
+    greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Testing Conditions"
+        if:  ${{github.event.inputs.tags == 'abcd' }}
+        run: echo "abcd Server is selected"    

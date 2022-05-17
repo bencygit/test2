@@ -58,7 +58,7 @@ on:
         
 
       Interface:
-       description: 'select package name'
+       description: 'select Interface name'
       Interface1:
         description: package1
         type: boolean

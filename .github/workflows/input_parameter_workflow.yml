@@ -34,6 +34,7 @@ on:
         required: true
 
       Package:
+       description: 'select package name'
       package1:
         description: package1
         type: boolean

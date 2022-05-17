@@ -60,22 +60,22 @@ on:
       Interface:
        description: 'select Interface name'
       Interface1:
-        description: package1
+        description: Interface
         type: boolean
         required: true
         default: false
       Interface2:
-        description: package2
+        description: Interface
         type: boolean
         required: true
         default: false
       Interface3:
-        description: package3
+        description: Interface
         type: boolean
         required: true
         default: false
       Interface4:
-        description: package4
+        description: Interface
         type: boolean
         required: true
         default: false

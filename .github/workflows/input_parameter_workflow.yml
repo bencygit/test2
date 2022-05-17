@@ -29,9 +29,31 @@ on:
         #Friendly description to be shown in the UI instead of 'name'
         description: 'SERVER_NAME'
         # Default value if no value is explicitly provided
-        default: 'wmeasnad01xyz'
+        default: 'wmserver1'
         # Input has to be provided for the workflow to run
         required: true
+
+      package1:
+        description: Whether to foo
+        type: boolean
+        required: true
+        default: true
+      package2:
+        description: Whether to foo
+        type: boolean
+        required: true
+        default: true
+      package3:
+        description: Whether to foo
+        type: boolean
+        required: true
+        default: true
+      package4:
+        description: Whether to foo
+        type: boolean
+        required: true
+        default: true
+        
 
 
 env:

@@ -57,6 +57,30 @@ on:
         default: false
         
 
+      Interface:
+       description: 'select package name'
+      Interface1:
+        description: package1
+        type: boolean
+        required: true
+        default: false
+      Interface2:
+        description: package2
+        type: boolean
+        required: true
+        default: false
+      Interface3:
+        description: package3
+        type: boolean
+        required: true
+        default: false
+      Interface4:
+        description: package4
+        type: boolean
+        required: true
+        default: false
+
+
 env:
   DAY_OF_WEEK: Monday     
   RT_Server: RT

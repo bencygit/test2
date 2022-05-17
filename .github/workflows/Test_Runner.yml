@@ -27,7 +27,7 @@ jobs:
    
         
       - name: "Testing Conditions"
-        if:  ${{github.event.inputs.choice == 'BT' }}
+        if:  ${{github.event.inputs.tags == 'abcd' }}
         run: echo "BT Server is selected"
 
       

@@ -31,7 +31,7 @@ jobs:
         shell: bash
         run: |
           chmod +x .github/scripts/test.sh
-          param1='GitHub'
+          param1=${{github.event.inputs.tags1}}
           param2=$(date +"%Y-%m-%d %H:%M:%S")
           param3=4
           .github/scripts/test.sh "${param1}" "${param2}" "${param3}"

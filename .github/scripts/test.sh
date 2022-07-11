@@ -1,6 +1,7 @@
 #!/bin/sh
 echo "Test Shell Script !!"
-echo "Hello $1"
+echo "INTERFACE TO BE DEPLOYED $1"
+echo "PACKAGE TO BE DEPLOYED $4"
 echo "Current time is $2"
 
 if [[ $3 == 1 ]]; then

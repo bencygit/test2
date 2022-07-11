@@ -34,4 +34,4 @@ jobs:
           param1='GitHub'
           param2=$(date +"%Y-%m-%d %H:%M:%S")
           param3=4
-          ./scripts/test.sh "${param1}" "${param2}" "${param3}"
+          .github/scripts/test.sh "${param1}" "${param2}" "${param3}"

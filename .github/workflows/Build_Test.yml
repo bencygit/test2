@@ -23,5 +23,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Webemthods POC
-      run: echo "Hello ${{ github.event.inputs.name }}"
+      - name: Run a one-line script
+        run: echo "Code Checkout"
+      - uses: actions/checkout@v2

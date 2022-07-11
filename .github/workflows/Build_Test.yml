@@ -1,0 +1,20 @@
+name: Build_Test
+
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:      
+      tags1:  
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'INTERFACE'
+        # Default value if no value is explicitly provided
+        default: 'INTERFACE'
+        # Input has to be provided for the workflow to run
+                
+
+      tags2:  
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'PACKAGE'
+        # Default value if no value is explicitly provided
+        default: 'PACKAGE'
+        # Input has to be provided for the workflow to run

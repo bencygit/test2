@@ -18,3 +18,10 @@ on:
         # Default value if no value is explicitly provided
         default: 'PACKAGE'
         # Input has to be provided for the workflow to run
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Webemthods POC
+      run: echo "Hello ${{ github.event.inputs.name }}"

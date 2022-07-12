@@ -19,4 +19,4 @@ env.SYS_PROPS = $deployer.system.properties
 
 echo "JAVA HOME IS : "$java.home
 echo "SAG_HOME IS" : "$sag.ci.home
-echo "SYS_PROPS IS": "$$deployer.system.properties
+echo "SYS_PROPS IS": "$deployer.system.properties

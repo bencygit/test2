@@ -30,12 +30,12 @@ do
     eval ${key}=\${value}
 done < "$props"
   
-  
-echo "JAVA HOME IS : " ${java.home}
-echo "SAG_HOME IS : " ${sag.ci.home}
-echo "SYS_PROPS IS: " ${deployer.system.properties}
 echo "User Id (db.test.user) =         " ${db_test_user}
-echo "user password (db.test.passwd) = " ${db_test_passwd}
+echo "user password (db.test.passwd) = " ${db_test_passwd}  
+echo "JAVA HOME IS = " ${java.home}
+echo "SAG_HOME IS = " ${sag.ci.home}
+echo "SYS_PROPS IS = " ${deployer.system.properties}
+
 
 else
 echo "$props not found."

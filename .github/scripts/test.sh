@@ -21,6 +21,6 @@ env.SYS_PROPS = $deployer.system.properties
 #	env.SAG_CI_HOME = "\"" + props['sag.ci.home'] + "\""
 #	env.SYS_PROPS = props['deployer.system.properties']
 
-echo "JAVA HOME IS : "props['sag.home']
-echo "SAG_HOME IS : "\"" + props['sag.ci.home'] + "\""
-echo "SYS_PROPS IS: "props['deployer.system.properties']
+echo "JAVA HOME IS : " ${java.home}
+echo "SAG_HOME IS : " ${sag.ci.home}
+echo "SYS_PROPS IS: " ${deployer.system.properties}

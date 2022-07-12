@@ -21,6 +21,19 @@ env.SYS_PROPS = $deployer.system.properties
 #	env.SAG_CI_HOME = "\"" + props['sag.ci.home'] + "\""
 #	env.SYS_PROPS = props['deployer.system.properties']
 
+if [ -f "$props" ]
+then
+  echo "$props found."
+  while IFS='=' read -r key value
+  do
+  key=$(echo $key | tr '.' '_')
+  eval ${key}=\${value}
+  done < "$props"
+  
 echo "JAVA HOME IS : " ${java.home}
 echo "SAG_HOME IS : " ${sag.ci.home}
 echo "SYS_PROPS IS: " ${deployer.system.properties}
+
+else
+echo "$props not found."
+fi

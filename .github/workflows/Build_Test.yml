@@ -48,9 +48,9 @@ jobs:
       - name: Run bash script
         shell: bash
         run: |
-          chmod +x .github/scripts/test.sh
+          chmod +x .github/scripts/deploy_test.sh
           param1=${{github.event.inputs.interface}}
           param2=${{github.event.inputs.package}}
           param3=$(date +"%Y-%m-%d %H:%M:%S")
           param4=4
-          .github/scripts/test.sh "${param1}" "${param2}" "${param3}" "${param4}"
+          .github/scripts/deploy_test.sh "${param1}" "${param2}" "${param3}" "${param4}"

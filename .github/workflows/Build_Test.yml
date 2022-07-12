@@ -34,5 +34,5 @@ jobs:
           param1=${{github.event.inputs.interface}}
           param2=${{github.event.inputs.package}}
           param3=$(date +"%Y-%m-%d %H:%M:%S")
-          
-          .github/scripts/test.sh "${param1}" "${param2}" "${param3}" 
+          param4=4
+          .github/scripts/test.sh "${param1}" "${param2}" "${param3}" "${param4}"

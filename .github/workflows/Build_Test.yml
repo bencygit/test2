@@ -19,7 +19,7 @@ on:
         default: 'PACKAGE'
         # Input has to be provided for the workflow to run
 jobs:
-  greet:
+  Build_job:
     runs-on: ubuntu-latest
 
     steps:

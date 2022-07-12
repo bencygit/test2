@@ -1,8 +1,8 @@
 #!/bin/sh
 echo "Test Shell Script !!"
 echo "INTERFACE TO BE DEPLOYED:: $1"
-echo "PACKAGE TO BE DEPLOYED:: $4"
-echo "Current time is $2"
+echo "PACKAGE TO BE DEPLOYED:: $2"
+echo "Current time is $3"
 
 if [[ $1 == 'TEST_INTERFACE1' ]]
 then

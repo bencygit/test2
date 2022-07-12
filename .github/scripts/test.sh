@@ -12,10 +12,10 @@ else
   echo "ENTER VALID INTERFACE DETAILS"
 fi
 
-props="./config/jenkins-dev.properties"	
-env.JAVA_HOME = $java.home
-env.SAG_HOME = $sag.ci.home
-env.SYS_PROPS = $deployer.system.properties 
+props="./jenkins-dev.properties"	
+#env.JAVA_HOME = $java.home
+#env.SAG_HOME = $sag.ci.home
+#env.SYS_PROPS = $deployer.system.properties 
 
 #	env.SAG_HOME = props['sag.home']
 #	env.SAG_CI_HOME = "\"" + props['sag.ci.home'] + "\""
@@ -29,6 +29,7 @@ then
   key=$(echo $key | tr '.' '_')
   eval ${key}=\${value}
   done < "$props"
+  
   
 echo "JAVA HOME IS : " ${java.home}
 echo "SAG_HOME IS : " ${sag.ci.home}

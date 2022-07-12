@@ -32,9 +32,9 @@ done < "$props"
   
 echo "User Id (db.test.user) =         " ${db_test_user}
 echo "user password (db.test.passwd) = " ${db_test_passwd}  
-echo "JAVA HOME IS = " ${java.home}
-echo "SAG_HOME IS = " ${sag.ci.home}
-echo "SYS_PROPS IS = " ${deployer.system.properties}
+echo "JAVA HOME IS = " ${java_home}
+echo "SAG_HOME IS = " ${sag_ci_home}
+echo "SYS_PROPS IS = " ${deployer_system_properties}
 
 
 else

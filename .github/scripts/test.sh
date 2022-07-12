@@ -12,7 +12,7 @@ else
   echo "ENTER VALID INTERFACE DETAILS"
 fi
 
-props="./jenkins-dev.properties"	
+props="./config/jenkins-dev.properties"	
 #env.JAVA_HOME = $java.home
 #env.SAG_HOME = $sag.ci.home
 #env.SYS_PROPS = $deployer.system.properties 
@@ -24,16 +24,18 @@ props="./jenkins-dev.properties"
 if [ -f "$props" ]
 then
   echo "$props found."
-  while IFS='=' read -r key value
-  do
-  key=$(echo $key | tr '.' '_')
-  eval ${key}=\${value}
-  done < "$props"
+while IFS='=' read -r key value
+do
+    key=$(echo $key | tr '.' '_')
+    eval ${key}=\${value}
+done < "$props"
   
   
 echo "JAVA HOME IS : " ${java.home}
 echo "SAG_HOME IS : " ${sag.ci.home}
 echo "SYS_PROPS IS: " ${deployer.system.properties}
+echo "User Id (db.test.user) =         " ${db_test_user}
+echo "user password (db.test.passwd) = " ${db_test_passwd}
 
 else
 echo "$props not found."

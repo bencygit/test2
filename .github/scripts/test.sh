@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo "Test Shell Script !!"
 echo "INTERFACE TO BE DEPLOYED:: $1"
 echo "PACKAGE TO BE DEPLOYED:: $2"

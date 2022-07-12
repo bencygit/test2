@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "Test Shell Script !!"
 echo "INTERFACE TO BE BUILD:: $1"
 echo "PACKAGE TO BE BUILD:: $2"

@@ -27,11 +27,11 @@ echo "$props not found."
 fi
 
 echo "Test Build Shell Script !!"
-echo "INTERFACE TO BE BUILD:: $1"
-echo "PACKAGE TO BE BUILD:: $2"
-echo "Current time is $3"
-
-if [[ $1 == 1 ]]; then
+echo "INTERFACE TO BE BUILD=$1"
+echo "PACKAGE TO BE BUILD=$2"
+echo "Current time is=$3"
+echo "Parameter 4 is=$4"
+if [[ $1 == 1 ]] && [[$2 == 1]] && [[$4 == 1]]]; then
   echo "BUILD TEST_INTERFACE1"
 elif [[ $1 == 2 ]]; then
   echo "BUILD TEST_INTERFACE2"

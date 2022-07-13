@@ -13,7 +13,7 @@ then
 while IFS='=' read -r key value
   do
     key=$(echo $key | tr '.' '_')
-    eval ${key}=\${value}
+   # eval ${key}=\${value}
   done < "$props"
   
 echo "User Id (db.test.user) =         " ${db_test_user}
@@ -23,9 +23,9 @@ echo "SAG_HOME IS = " ${sag_ci_home}
 echo "SYS_PROPS IS = " ${deployer_system_properties}
 
 #/// setup ANT variables
-JAVA_HOME = ${java_home}
-SAG_HOME = ${sag_ci_home}
-SYS_PROPS = ${deployer_system_properties}
+JAVA_HOME=$(java_home)
+SAG_HOME=$(sag_ci_home)
+SYS_PROPS=$(deployer_system_properties)
 
 else
 echo "$props not found."

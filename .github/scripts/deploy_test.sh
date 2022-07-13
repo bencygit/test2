@@ -5,10 +5,10 @@ echo "PACKAGE TO BE DEPLOYED :: $2"
 echo "Current time is :: $3"
 echo "Cueent Build Number is :: $4"
 
-if [[ $2 == P ]]; then
-  echo "DEPLOY TEST_PACKAGE P"
-elif [[ $2 == Q ]]; then
-  echo "DEPLOY TEST_PACKAGE Q"
+if [[ $2 == 1 ]]; then
+  echo "DEPLOY TEST_PACKAGE 1"
+elif [[ $2 == 1 ]]; then
+  echo "DEPLOY TEST_PACKAGE 1"
 else
   echo "ENTER VALID INTERFACE DETAILS"
 fi

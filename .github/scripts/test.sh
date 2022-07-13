@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #// read config properties for the environment
 props="./config/jenkins-dev.properties"	

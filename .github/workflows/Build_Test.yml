@@ -59,7 +59,7 @@ jobs:
           param4=4
           param5=${{github.event.inputs.server_type}}
           param6=${{github.event.inputs.server_name}}
-          .github/scripts/deploy_test.sh "${param1}" "${param2}" "${param3}" "${param4}" "${param5}" "${param6}"
+          .github/scripts/test.sh "${param1}" "${param2}" "${param3}" "${param4}" "${param5}" "${param6}"
   
   Deploy_job:
     runs-on: ubuntu-latest
@@ -77,5 +77,5 @@ jobs:
           param2=${{github.event.inputs.package}}
           param3=$(date +"%Y-%m-%d %H:%M:%S")
           param4=${{github.run_number}}
-          .github/scripts/test.sh "${param1}" "${param2}" "${param3}" "${param4}"
+          .github/scripts/deploy_test.sh "${param1}" "${param2}" "${param3}" "${param4}"
           

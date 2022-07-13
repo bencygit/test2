@@ -3,14 +3,18 @@
 #// read config properties for the environment
 props="./config/jenkins-dev.properties"	
 
+#// bash variable’s name may contain only digits, letters, and underscores. Therefore we need to choose the underscore ‘_’:
+#// We read key and value separately, with the equal sign as a separator. 
+#// Next, tr translates dots to underscores in the property name. Finally, eval defines a bash variable with a new name.
+
 if [ -f "$props" ]
 then
   echo "$props found."
 while IFS='=' read -r key value
-do
+  do
     key=$(echo $key | tr '.' '_')
     eval ${key}=\${value}
-done < "$props"
+  done < "$props"
   
 echo "User Id (db.test.user) =         " ${db_test_user}
 echo "user password (db.test.passwd) = " ${db_test_passwd}  

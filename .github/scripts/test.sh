@@ -35,9 +35,9 @@ echo "Parameter 4 is=$4"
 echo "Parameter 5 (Server Type)"=$5
 echo "Parameter 5 (Server Name)"=$6
 
-if [[ $1 == 1 ]] && [[$2 == 1]] && [[$5 == 1]] && [[$6 == 1]]; then
+if [ $1 == 1 ] && [ $2 == 1 ] && [ $5 == 1 ] && [ $6 == 1 ]; then
   echo "BUILD TEST_INTERFACE1"
-elif [[ $1 == 2 ]] && [[$2 == 2]] && [[$5 == 2]] && [[$6 == 2]]; then
+elif [ $1 == 2 ] && [ $2 == 2 ] && [ $5 == 2 ] && [ $6 == 2 ]; then
   echo "BUILD TEST_INTERFACE2"
 else
   echo "ENTER VALID INTERFACE DETAILS"

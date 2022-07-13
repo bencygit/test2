@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #// read config properties for the environment
 props="./config/jenkins-dev.properties"	
@@ -11,10 +11,10 @@ if [ -f "$props" ]
 then
   echo "$props found."
 while IFS='=' read -r key value
-  do
+do
     key=$(echo $key | tr '.' '_')
     eval ${key}=\${value}
-  done < "$props"
+done < "$props"
   
 echo "User Id (db.test.user) =         " ${db_test_user}
 echo "user password (db.test.passwd) = " ${db_test_passwd}  

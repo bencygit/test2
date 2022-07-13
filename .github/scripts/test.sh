@@ -26,6 +26,7 @@ else
 echo "$props not found."
 fi
 
+#/// Testing input parameters
 echo "Test Build Shell Script !!"
 echo "INTERFACE TO BE BUILD=$1"
 echo "PACKAGE TO BE BUILD=$2"

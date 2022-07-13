@@ -23,9 +23,9 @@ echo "SAG_HOME IS = " ${sag_ci_home}
 echo "SYS_PROPS IS = " ${deployer_system_properties}
 
 #/// setup ANT variables
-env_JAVA_HOME = "${java_home}"
-env_SAG_HOME = "${sag_ci_home}"
-env_SYS_PROPS = "${deployer_system_properties}"
+env_JAVA_HOME = $(java_home)
+env_SAG_HOME = $(sag_ci_home)
+env_SYS_PROPS = $(deployer_system_properties)
 
 else
 echo "$props not found."

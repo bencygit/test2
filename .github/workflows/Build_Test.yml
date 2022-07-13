@@ -4,19 +4,33 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:      
-      interface:  
+       server_type:  
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'INTERFACE'
+        description: 'server_type'
         # Default value if no value is explicitly provided
-        default: 'INTERFACE'
+        default: 'server_type'
+        # Input has to be provided for the workflow to run
+        
+       server_name:  
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'server_name'
+        # Default value if no value is explicitly provided
+        default: 'server_name'
+        # Input has to be provided for the workflow to run
+    
+       interface:  
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'interface'
+        # Default value if no value is explicitly provided
+        default: 'interface'
         # Input has to be provided for the workflow to run
                 
 
-      package:  
+       package:  
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'PACKAGE'
+        description: 'package'
         # Default value if no value is explicitly provided
-        default: 'PACKAGE'
+        default: 'package'
         # Input has to be provided for the workflow to run
         
 #Setting environment variables
@@ -38,7 +52,6 @@ jobs:
       - name: Run bash script
         shell: bash
         run: |
-          
           chmod +x .github/scripts/test.sh
           param1=${{github.event.inputs.interface}}
           param2=${{github.event.inputs.package}}
@@ -62,4 +75,6 @@ jobs:
           param2=${{github.event.inputs.package}}
           param3=$(date +"%Y-%m-%d %H:%M:%S")
           param4=${{github.run_number}}
-          .github/scripts/deploy_test.sh "${param1}" "${param2}" "${param3}" "${param4}"
+          param5=${{github.event.inputs.server_type}}
+          param6=${{github.event.inputs.server_name}}
+          .github/scripts/deploy_test.sh "${param1}" "${param2}" "${param3}" "${param4}" "${param5}" "${param6}"

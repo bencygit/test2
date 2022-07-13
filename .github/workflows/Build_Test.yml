@@ -18,6 +18,14 @@ on:
         # Default value if no value is explicitly provided
         default: 'PACKAGE'
         # Input has to be provided for the workflow to run
+        
+#Setting environment variables
+
+env:
+  JAVA_HOME: ${java_home}
+  SAG_HOME: ${sag_ci_home}
+  SYS_PROPS: ${deployer_system_properties} 
+        
 jobs:
   Build_job:
     runs-on: ubuntu-latest
@@ -30,6 +38,7 @@ jobs:
       - name: Run bash script
         shell: bash
         run: |
+          
           chmod +x .github/scripts/test.sh
           param1=${{github.event.inputs.interface}}
           param2=${{github.event.inputs.package}}

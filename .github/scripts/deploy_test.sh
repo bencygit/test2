@@ -12,3 +12,5 @@ elif [[ $2 == 1 ]]; then
 else
   echo "ENTER VALID INTERFACE DETAILS"
 fi
+
+$ echo "Test email from shell" | mail -s "Test email from shell" bencyjacob07@gmail.com
